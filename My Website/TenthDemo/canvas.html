@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Clock</title>
+    <style>
+        div{
+            margin-top:100px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <canvas id="clock" width="400" height="400" style="border:1px solid #000"></canvas>
+</div>
+<script>
+    var canvas = document.getElementById("clock");
+    var ctx = canvas.getContext("2d");
+    var width = canvas.width;
+    var height = canvas.height;
+    var radius = width/2;
+    //绘制外框圆
+    function drawBackground(){
+        ctx.save();
+        //平移坐标系统
+        ctx.translate(radius,radius);
+        ctx.beginPath();
+        ctx.lineWidth = 10;
+        ctx.arc(0,0,radius-5,0,Math.PI*2,true);
+        ctx.stroke();
+        ctx.closePath();
+    }
+    //绘制12个小时数
+    function drawHournumbers(){
+        var hourNumbers = [3,4,5,6,7,8,9,10,11,12,1,2];
+        //遍历数组中的12个小时数，forEach()方法
+        hourNumbers.forEach(function(number,index){
+            var rad = Math.PI*2/12 * index;
+            var x = Math.cos(rad)*(radius-40);  // radius-40 为了让数字位于外框圆之内；
+            var y = Math.sin(rad)*(radius-40);
+            ctx.font = "35px Arial";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText(number,x,y);
+
+        });
+    }
+    //绘制60个圆点
+    function drawDots(){
+        for(var i = 0;i < 60;i++){
+            var rad = Math.PI*2/60 * i;
+            var x = Math.cos(rad)*(radius-17);  // radius-17 为了让数字位于外框圆之内；
+            var y = Math.sin(rad)*(radius-17);
+            ctx.beginPath();
+            ctx.arc(x,y,3,0,Math.PI*2,true);
+            if(i % 5 == 0){
+                ctx.fillStyle = "#000";
+                ctx.fill();
+            }
+            else{
+                ctx.fillStyle = "#bbb";
+                ctx.fill();
+            }
+            ctx.closePath();
+        }
+    }
+    //绘制时针
+   /*<!-- 绘制时针时对画布进行了旋转，所以用save()和restore()方法，分针，秒针同理-->*/
+    function drawHours(hour,minute){
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(0,3);
+        var rad = Math.PI*2/12 *hour;
+        var mrad = Math.PI*2/12/60 * minute;
+        ctx.rotate(rad+mrad);
+        ctx.lineWidth = 6;
+        ctx.lineCap = "round";
+        ctx.lineTo(0,-radius/2);
+        ctx.strokeStyle = "#ae1";
+        ctx.stroke();
+        ctx.closePath();
+        ctx.restore();
+    }
+    //绘制分针
+    function drawMinutes(minute){
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(0,6);
+        var rad = Math.PI*2/60 * minute;
+        ctx.rotate(rad);
+        ctx.lineWidth = 4;
+        ctx.lineCap = "round";
+        ctx.strokeStyle = "#f0f";
+        ctx.lineTo(0,-radius+62);
+        ctx.stroke();
+        ctx.closePath();
+        ctx.restore();
+    }
+    //绘制秒针
+    function drawSeconds(second){
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(0,9);
+        var rad = Math.PI*2/60 * second;
+        ctx.rotate(rad);
+        ctx.lineWidth = 2;
+        ctx.lineCap = "round";
+        ctx.lineTo(0,-radius+23);
+        ctx.strokeStyle = "#f00";
+        ctx.stroke();
+        ctx.closePath();
+        ctx.restore();
+    }
+    //绘制中心圆点
+    function drawCenterdot(){
+        ctx.beginPath();
+        ctx.arc(0,0,4,0,Math.PI*2,true);
+        ctx.fillStyle = "#fff";
+        ctx.fill();
+        ctx.closePath();
+    }
+    //动态时钟
+    function draw(){
+        ctx.clearRect(0,0,width,height);
+        //获取当前时间
+        var now = new Date();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var second = now.getSeconds();
+        drawBackground();
+        drawHournumbers();
+        drawDots();
+        drawHours(hour,minute);
+        drawMinutes(minute);
+        drawSeconds(second);
+        drawCenterdot();
+        ctx.restore();
+    }
+    draw();
+    setInterval(draw,1000);
+</script>
+</body>
+</html>

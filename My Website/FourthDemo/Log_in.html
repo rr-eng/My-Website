@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册验证</title>
+    <link rel="stylesheet" href="css/Log_in.css" type="text/css">
+    <script src="js/Log_in.js"></script>
+</head>
+<body>
+<h2>用户注册</h2>
+<form name="form">
+    <p>
+        <label for="userName">
+            用户名：<input type="text" id="userName" name="userName" class="text">
+        </label>
+        <span id="userName_Info"></span>
+    </p>
+    <p>
+        <label for="password1">
+            密码：<input type="password" id="password1" name="password1" class="text">
+        </label>
+        <span id="password1_Info"></span>
+    </p>
+    <p>
+        <label for="password2">
+            确认密码：<input type="password" id="password2" name="password2" class="text">
+        </label>
+        <span id="password2_Info"></span>
+    </p>
+    <p>性别：
+        <input type="radio" name="sex">男
+        <input type="radio" name="sex">女
+    </p>
+    <p>出生日期：
+        <select name="select_year" id="select_year"></select>年
+        <select name="select_month" id="select_month"></select>月
+        <select name="select_day" id="select_day"></select>日
+    </p>
+    <p>身份证号：
+        <label for="idNumber">
+            <input type="text" id="idNumber" name="idNumber" class="text">
+        </label>
+        <span id="idNumber_Info"></span>
+    </p>
+    <p>手机号码：
+        <label for="phoneNumber">
+            <input type="text" id="phoneNumber" name="phoneNumber" class="text">
+        </label>
+        <span id="phoneNumber_Info"></span>
+    </p>
+    <p>电子邮箱：
+        <label for="email">
+            <input type="text" id="email" name="email" class="text">
+        </label>
+        <span id="email_Info"></span>
+    </p>
+    <p>
+        <textarea name="" id="" cols="40" rows="8">注册条款</textarea><br>
+        <input type="checkbox" id="agreeBtn" name="agreeBtn">我已阅读并同意以上条款
+        <span id="agreeBtn_Info"></span>
+    </p>
+    <p>
+        <input type="button" value="提交" id="submit" >
+        <input type="reset">
+    </p>
+
+</form>
+</body>
+</html>

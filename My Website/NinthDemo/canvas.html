@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas画布  坐标变换</title>
+</head>
+<body>
+<canvas id="can" width="450" height="380" style="border:1px solid #000"></canvas>
+<canvas id="can1" width="450" height="380" style="border:1px solid #000"></canvas>
+<!--绘制50个矩形-->
+<script>
+    var canvas = document.getElementById("can");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "rgba(255,0,0,0.3)";  //0.3控制红色透明度
+    ctx.translate(30,200);  //移动坐标原点，起始矩形位置
+    //每次绘制矩形前先进行坐标变换
+    for(var i = 0;i < 50;i++){
+        ctx.translate(50,50);
+        ctx.scale(0.93,0.93);
+        ctx.rotate(-Math.PI/10);  //逆时针旋转
+        ctx.fillRect(0,0,150,75);
+    }
+</script>
+
+<!--绘制“雪花飘飘”动态效果-->
+<script>
+    var canvas = document.getElementById("can1");
+    var ctx = canvas.getContext("2d");
+    setInterval("fall(ctx)",200);
+    //绘制花朵函数
+    function createFlower(context,n,dx,dy,size,length){
+        context.beginPath();
+        context.moveTo(dx,dy+size);
+        var dig = 2*Math.PI/n;
+        for(var i = 1;i < n+1;i++){
+            //计算控制点的坐标
+            var ctrlX = Math.sin((i-0.5)*dig)*length+dx;
+            var ctrlY = Math.cos((i-0.5)*dig)*length+dy;
+            //计算结束点的坐标
+            var x = Math.sin(i*dig)*size+dx;
+            var y = Math.cos(i*dig)*size+dy;
+            //绘制二次曲线
+            context.quadraticCurveTo(ctrlX,ctrlY,x,y);
+        }
+        context.closePath();
+    }
+    //定义每个雪花的初始位置
+    snowPos = [
+        {x:20,y:4},
+        {x:60,y:4},
+        {x:100,y:4},
+        {x:140,y:4},
+        {x:180,y:4},
+        {x:220,y:4},
+        {x:260,y:4},
+        {x:300,y:4},
+        {x:340,y:4},
+        {x:380,y:4}
+    ];
+    function fall(context){
+        context.fillStyle = "#000";
+        context.fillRect(0,0,450,380);
+        context.fillStyle = "#fff";
+        for(var i = 0;i <snowPos.length;i++){
+            //保存当前绘图状态
+            context.save();
+            //平移坐标系统
+            context.translate(snowPos[i].x,snowPos[i].y);
+            //旋转坐标系统
+            context.rotate((Math.random()*6-3)*Math.PI/10);
+            //控制雪花下落
+            snowPos[i].y += Math.random()*8;
+            if(snowPos[i].y>280){
+                snowPos[i].y=4;
+            }
+            createFlower(context,6,0,0,5,8);
+            context.fill();
+            context.restore();
+        }
+    }
+</script>
+</body>
+</html>
+
+<!--
+translate(float dx,float dy)  平移坐标系统，将坐标位置从(0,0)位置平移到(dx,dy)位置；
+scale(float sx,float sy)  缩放坐标系统，x坐标*sx,y坐标*sy；
+rotate(float angle)  旋转坐标系统
+save()  保存当前的绘图状态
+restore()  恢复之前保存的绘图状态
+-->

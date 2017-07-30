@@ -1,0 +1,224 @@
+/*<!--图片开始-->*/
+.div_img a img{
+    width:100%;
+    height:500px;
+}
+/*<!--图片结束-->*/
+
+/*关于我们开始*/
+.main_container{
+    width:100%;
+    margin:50px 0 50px 0;
+    overflow:hidden;
+    position:relative;
+ }
+.main_container .left{
+    border:5px solid #dddddd;
+    margin-left:150px;
+}
+.main_container .left .bg{
+    width:240px;
+    height:70px;
+    background-image:url("../img/bg.jpg ");
+    background-size:240px 70px;
+    line-height:70px;
+    font-size:26px;
+    color:#ffffff;
+}
+.main_container .left ul li{
+    display:block;
+    width:240px;
+    height:45px;
+    line-height:45px;
+    border-bottom:1px solid #dddddd;
+}
+.main_container .left ul li a{
+    font-weight:bold;
+    font-size:17px;
+    color:#000000;
+    text-decoration:none;
+}
+.main_container .left ul li a:hover{
+    color:#0066ff;
+}
+.main_container .right{
+    width:800px;
+    margin-right:100px;
+    padding-top:20px;
+}
+/*.main_container .right .new_cont{*/
+    /*overflow:hidden;*/
+    /*display:none;*/
+/*}*/
+.main_container .right .new_cont>p{
+    height:45px;
+    border-bottom:1px solid #cccccc;
+}
+.main_container .right .new_cont p img{
+    width:800px;
+    height:220px;
+}
+/*关于我们结束*/
+
+/*<!--新闻资讯开始-->*/
+/*部分css样式和关于我们一样*/
+.main_container .right .new_cont .news_list{
+    margin-top:30px;
+    height:153px;
+    border-bottom:1px dashed #cccccc;
+}
+.main_container .right .new_cont .news_list a img{
+    width:220px;
+    height:128px;
+}
+.main_container .right .new_cont .news_list div{
+    width:530px;
+}
+.main_container .right .new_cont .p{
+    border-bottom:none;
+    height:32px;
+    line-height:32px;
+    font-size:18px;
+    color:#aaa;
+    font-weight:bold;
+}
+.main_container .right .new_cont .news_btm{
+    margin-top:60px;
+}
+.main_container .right .new_cont .news_btm a{
+    color:#000000;
+}
+.main_container .right .new_cont .news_btm a span{
+    display:inline-block;
+    line-height:20px;
+    border:1px solid #cccccc;
+    padding:2px;
+}
+.main_container .right .new_cont .news_btm a span:hover{
+    background-color:#0066ff;
+}
+/*<!--新闻咨询结束-->*/
+
+/*<!--产品信息开始-->*/
+/*<!--部分样式和上述一样-->*/
+.main_container ._left{
+    margin-left:150px;
+    /*height:900px;*/
+}
+.main_container ._left .left{
+    margin:0 0 20px 0;
+}
+.main_container ._left .tp{
+    width:250px;
+    height:40px;
+    background-color:#0066ff;
+    position:absolute;
+    top:290px;
+    line-height:40px;
+    padding:0 20px 0 20px;
+}
+.main_container ._left .tp span a{
+    color:#ffffff;
+    font-size:16px;
+}
+.main_container ._left .product1,.product2{
+    border:1px solid #cccccc;
+    width:250px;
+    height:122px;
+    position:absolute;
+    top:345px;
+}
+.main_container ._left .product2{
+    position:absolute;
+    top:480px;
+}
+.main_container ._left .product1 img,.product2 img{
+    width:124px;
+    height:120px;
+}
+.main_container .right{
+    margin-bottom:30px;
+}
+.main_container .right .product_list img{
+    width:152px;
+    height:80px;
+}
+.main_container .right .product_list div{
+    width:620px;
+}
+.main_container .right .product_list{
+    padding:20px 0 30px 0;
+    border-bottom:1px dashed #cccccc;
+}
+/*<!--产品信息结束-->*/
+
+/*<!--解决方案开始-->*/
+.main_container .right .new_cont .img img{
+    margin-left:20px;
+    width:700px;
+    height:300px;
+}
+/*<!--解决方案结束-->*/
+
+/*<!--服务与支持开始-->*/
+.main_container .right .service_list img{
+    width:152px;
+    height:80px;
+}
+.main_container .right .service_list{
+    padding:10px 0 55px 0;
+    border-bottom:1px dashed #cccccc;
+}
+.main_container .right .service_list div{
+    width:605px;
+}
+/*<!--服务与支持结束-->*/
+
+/*<!--服务与支持详情页开始-->*/
+.main_container .right .service_cont .sp{
+    border-bottom:1px solid #cccccc;
+    height:40px;
+}
+.main_container .right .service_cont p{
+    font-size:16px;
+}
+.main_container .right .service_cont {
+    display:none;
+}
+/*<!--服务与支持详情页结束-->*/
+
+/*<!--合作伙伴开始-->*/
+.partner_container{
+    margin:60px 0 50px 0;
+}
+.partner_container .partner_content{
+    width:1100px;
+    margin:auto;
+}
+.partner_container .partner_content p{
+    border-bottom:1px solid #cccccc;
+    height:38px;
+}
+.partner_container .partner_content ul{
+    margin-bottom:40px;
+}
+.partner_container .partner_content ul li{
+    display:inline-block;
+    margin:0 10px 0 45px;
+    width:208px;
+    height:120px ;
+    border:4px solid #eeeeee;
+}
+.partner_container .partner_content ul li img{
+    width:200px;
+    height:99px;
+}
+/*<!--合作伙伴结束-->*/
+
+
+
+
+
+
+
+

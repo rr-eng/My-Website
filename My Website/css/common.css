@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+}
+/*index.html开始*/
+.container{
+    width:100%;
+    height:662px;
+    background:url(../img/bgimg.jpg );
+    position:relative;
+}
+
+/*4条line采用绝对定位*/
+.top-line,.left-line,.right-line,.bottom-line{
+    background:#c9c9c9;
+    position:absolute;
+}
+.top-line{
+    width:81%;
+    height:6px;
+    top:8%;
+    left:6%;
+ }
+.left-line{
+    width:6px;
+    height:71%;
+    top:13%;
+    left:10%;
+}
+.right-line{
+    width:6px;
+    height:70%;
+    right:10%;
+    bottom:27%;
+}
+.bottom-line{
+    width:81%;
+    height:6px;
+    bottom:22%;
+    left:12%;
+}
+
+/*3个单词css样式修饰*/
+.left-line p,.right-line p,.bottom-line p{
+    text-align:center;
+}
+.left-line p a,.right-line p a,.bottom-line p a{
+    display:block;
+    text-decoration:none;
+    font-size:28px;
+    font-family:"Sylfaen";
+    color:#fff;
+}
+.left-line p a:hover,.right-line p a:hover,.bottom-line p a:hover{
+    color: #9a6e7d;
+}
+.left-line p{
+    animation:AboutMe3D 3s infinite;
+}
+.right-line p{
+    animation:Contact3D 3s 1s infinite;
+}
+.bottom-line p{
+    animation:myProjects3D 4s infinite;
+}
+
+/*3个单词3D动画 Z轴*/
+/*About Me动画*/
+@-webkit-keyframes AboutMe3D{
+    0%{
+        transform:translate(0,70px);
+        -webkit-transform:translate(0,70px);
+    }
+    100%{
+        transform:translate(0,350px);
+        -webkit-transform:translate(0,350px);
+    }
+}
+/*Contact动画*/
+@-webkit-keyframes Contact3D{
+    0%{
+        transform:translate(0,90px);
+        -webkit-transform:translate(0,90px);
+    }
+    100%{
+        transform:translate(0,390px);
+        -webkit-transform:translate(0,390px);
+    }
+}
+/*My Projects动画*/
+@-webkit-keyframes myProjects3D{
+    0%{
+        transform:translate(-400px,10px);
+        -webkit-transform:translate(-400px,10px);
+    }
+    100%{
+        transform:translate(80px,10px);
+        -webkit-transform:translate(80px,10px);
+    }
+}
+
+/*文本div采用绝对定位*/
+.text{
+    position:absolute;
+    top:15%;
+    left:18%;
+}
+.text p{
+    line-height:40px;
+    font-size:22px;
+    color:#fff;
+    float:left;
+}
+.text img{
+    float:right;
+    margin:0 0 0 50px;
+}
+
+/*按钮button采用绝对定位*/
+.button{
+    position:absolute;
+    top:50%;
+    left:45%;
+}
+.button button{
+    width:140px;
+    height:60px;
+    border:2px solid #88cab6;
+    border-radius:7px;
+    font-size:20px;
+    color:#99ccff;
+    animation:buttonRotate 3s infinite;
+    -webkit-animation:buttonRotate 3s infinite;
+}
+/*按钮旋转动画*/
+@-webkit-keyframes buttonRotate{
+    0% {
+        background: #fffdf8;
+        transform:scale(1,1);
+        -webkit-transform:scale(1,1);
+    }
+    50%{
+        background: #cce3bc;
+    }
+    100% {
+        background: #dffffa;
+        transform:scale(1.3,1.3);
+        -webkit-transform:scale(1.3,1.3);
+    }
+}
+/*freeCodeCamp和github*/
+.imgs{
+    position:absolute;
+    right:14%;
+    bottom:30%;
+}
+.imgs img{
+    margin:0 0 0 15px;
+}
+.imgs img:hover{
+    opacity:0.3;
+}
+/*index.html结束*/

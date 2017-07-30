@@ -1,0 +1,269 @@
+/*page1.html开始*/
+*{
+    margin:0;
+    padding:0;
+}
+/*控制屏幕下方滚动条不出现*/
+body{
+    overflow:scroll;
+    overflow-x:hidden;
+    background:#f2f2f2;
+}
+/*header部分开始*/
+.header{
+    width:100%;
+    height:60px;
+    background:#f7f2ef;
+}
+.header .lines{
+    float:left;
+
+}
+.header .lines div{
+    float:left;
+    width:5px;
+    height:60px;
+    background:#00cc33;
+    margin:0 3px;
+}
+.header .lines div:nth-child(1){
+    margin-left:25px;
+}
+.header .nav_text{
+    float:right;
+    position:relative;
+}
+.header .nav_text .move_line{
+    width:180px;
+    height:4px;
+    background:#00cc33;
+    position:absolute;
+    top:50px;
+    left:-200px;
+    display:none;
+}
+.header .nav_text ul li{
+    display:inline-block;
+    list-style:none;
+    width:185px;
+    text-align:center;
+    line-height:60px;
+    margin:0 30px;
+}
+.header .nav_text ul li a{
+    text-decoration:none;
+    font-size:22px;
+    color:#99ccff;
+}
+.header .nav_text ul li a:hover{
+    font-size:20px;
+    color:#c9c9c9;
+}
+/*header部分结束*/
+
+/*轮播部分开始*/
+.container{
+    width:99%;
+    height:450px;
+    border:7px solid #cfe8c3;
+    position:relative;
+}
+/*图片部分*/
+.container .img_list li{
+    list-style:none;
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+}
+.container .img_list li a img{
+    width:1336px;
+    height:450px;
+}
+/*数字部分*/
+.container .number_list{
+    position:absolute;
+    left:42%;
+    top:390px;
+}
+.container .number_list li{
+    list-style:none;
+    display:inline-block;
+    width:18px;
+    height:18px;
+    border:3px solid #99ccff;
+    background: #eeffc2;
+    border-radius:50%;
+    margin:0 5px;
+    cursor:pointer;
+}
+/*左右按钮部分*/
+.left,.right{
+    position:absolute;
+    top:34%;
+    width:45px;
+    height:110px;
+    background: #b3c0ab;
+    font-size:45px;
+    text-align:center;
+    line-height:110px;
+    color:#888;
+    opacity:0.3;
+    cursor:pointer;
+}
+.left:hover,.right:hover{
+    opacity:1;
+}
+/*轮播部分结束*/
+
+/*主体内容开始*/
+.main_content{
+    width:100%;
+    background:#f2f2f2;
+    padding-top:30px;
+}
+.main_content h1{
+    font-size:38px;
+    text-align:center;
+    color:#777777;
+}
+/*左边导航开始*/
+.main_content .left_nav{
+    float:left;
+    width:260px;
+    height:auto;
+    border:5px solid #d0eaa2;
+    border-radius:9px;
+    margin:30px 0 0 60px;
+    padding:10px 0;
+}
+.main_content .left_nav  .title{
+    height:60px;
+    border-bottom:2px solid #ccc;
+    padding:5px 0;
+}
+.main_content .left_nav .title .line{
+    width:5px;
+    height:60px;
+    background:#9966ff;
+    float:left;
+    margin:0 3px;
+}
+.main_content .left_nav .title .line:nth-child(1){
+    margin-left:8px;
+}
+.main_content .left_nav .title .text{
+    float:right;
+    font-size:36px;
+    font-weight:bold;
+    color:#99ccff;
+    line-height:60px;
+    margin-right:55px;
+}
+.main_content .left_nav .list{
+    padding:8px 20px;
+}
+.main_content .left_nav .list .square p{
+    font-size:20px;
+    margin:0 0 0 10px;
+    line-height:35px;
+    color: #ffa1c5;
+    border-bottom:1px solid #88cab6;
+    cursor:pointer;
+}
+.main_content .left_nav .list .square p img{
+    margin-right:10px;
+}
+.main_content .left_nav .list .square ul li{
+    list-style:none;
+    text-align:center;
+    line-height:32px;
+    border-bottom:1px dashed #ff5cb5;
+}
+.main_content .left_nav .list .square ul li a{
+    text-decoration:none;
+}
+/*左边导航结束*/
+
+/*右边内容开始*/
+.main_content .right_demo{
+    float:right;
+    width:870px;
+    margin:30px 0 0 60px;
+}
+
+/*第一行开始*/
+.demo{
+    padding:12px;
+    border:4px solid #fffdf8;
+    border-radius:10px;
+    float:left;
+    margin-bottom:40px;
+}
+.demo1{
+    margin:0 170px 0 0;
+}
+.demo:hover{
+    cursor:pointer;
+}
+.demo img{
+    border-radius:15px;
+}
+.demo p{
+    font-size:23px;
+    text-align:center;
+    color:#999;
+}
+.demo p:hover{
+    color:#444;
+}
+/*第二行开始*/
+.demo3{
+    margin:0 90px 30px 0 ;
+}
+/*第四行开始*/
+.demo6{
+    margin:0 100px 30px 60px;
+}
+/*第五行开始*/
+.demo8{
+    margin:0 0 30px 60px;
+}
+/*第六行开始*/
+.demo9{
+    margin:0 100px 30px 0;
+}
+/*右边内容结束*/
+/*主体内容结束*/
+
+/*底部开始*/
+.footer{
+    width:100%;
+    height:60px;
+    background: #555555;
+    clear:both;
+}
+.footer .footer_content{
+    width:70%;
+    margin:0 auto;
+}
+.footer .footer_content p{
+    line-height: 60px;
+    float:left;
+    font-size:20px;
+    color:#fff;
+}
+.footer .footer_content p img{
+    margin:0 10px 0 20px;
+    vertical-align:middle;
+}
+.footer .footer_content p:nth-child(2) {
+    float: right;
+}
+/*底部结束*/
+
+/*css3动画效果*/
+/*.demo:hover{*/
+    /*transform:scale(1.2,1.2);*/
+/*}*/
+/*page1.html结束*/

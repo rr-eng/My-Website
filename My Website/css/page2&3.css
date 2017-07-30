@@ -1,0 +1,57 @@
+/*page3.html开始*/
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background:#fff;
+}
+.page3_container {
+    width: 100%;
+    height: 600px;
+    background: url(../img/page3bg.jpg) no-repeat;
+}
+.page3_container .container_auto{
+    width:70%;
+    height:300px;
+    margin:0 auto;
+    padding:100px;
+}
+.container_auto p img{
+    width:27px;
+    height:27px;
+    margin:0 8px 0 0;
+}
+.container_auto p{
+    font-size:26px;
+    line-height:65px;
+}
+/*留言区样式控制*/
+#message{
+    background: #fffafa;
+    padding:10px;
+}
+#button{
+    width:80px;
+    height:40px;
+    border:1px solid #dffffa;
+    border-radius:7px;
+    background: #d0eeff;
+    margin-left:130px;
+    cursor:pointer;
+}
+/*page3.html结束*/
+
+/*page2.html开始*/
+.resume_container{
+    width:100%;
+    height:1400px;
+    background:url(../img/page2bg.jpg ) no-repeat;
+    text-align:center;
+}
+.resume_container img{
+    width:800px;
+    height:1200px;
+    margin:80px;
+}
+/*page2.html结束*/
