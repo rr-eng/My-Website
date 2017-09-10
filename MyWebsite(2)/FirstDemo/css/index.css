@@ -1,0 +1,260 @@
+/*<!--轮播图开始-->*/
+#myCarousel img{
+    width:100%;
+    height:500px;
+}
+/*<!--轮播图结束-->*/
+/*<!--主体内容开始-->*/
+/*<!--产品信息开始-->*/
+.prod-info{
+    margin:130px 0 0 120px;
+    width:1100px;
+}
+.prod-info .top{
+    margin:44px 0 0 50px;
+    position:relative;
+}
+.prod-info .top .title{
+    margin:auto;
+    width:96px;
+    height:120px;
+    position:absolute;
+    top:-58px;
+    left:486px;
+}
+.prod-info .top .title p{
+    color:#5a98de;
+}
+.prod-info .top .title div{
+    margin-left:6px;
+    width:70px;
+    border:2px solid #0000FF;
+}
+.prod-info .container{
+    margin:46px 0 0 -10px;
+}
+.prod-info .container ul li{
+    display:inline-block;
+    width:192px;
+    height:300px;
+    margin:0 35px 0 27px;
+}
+.prod-info .container ul li .div{
+    position:relative;
+}
+.prod-info .container ul li .div .img2{
+    position:absolute;
+    top:0;
+}
+.prod-info .container ul li:hover .img2{
+    display:none;
+}
+.prod-info .container ul li .div1{
+    width:207px;
+    height:230px;
+    background-size:207px 230px;
+    background:url("../img/u106.png");
+    position:relative;
+}
+.prod-info .container ul li .f1{
+    background:url("../img/u106.png");
+    height: 233px;
+    background-size: 100% 233px;
+}
+.prod-info .container ul li .f2{
+    background:url("../img/u112.png");
+    height: 233px;
+    background-size: 100% 233px;
+}
+.prod-info .container ul li .f3{
+    background:url("../img/u118.png");
+    height: 233px;
+    background-size: 100% 233px;
+}
+.prod-info .container ul li .f4{
+    background:url("../img/u124.png");
+    height: 233px;
+    background-size: 100% 233px;
+}
+.prod-info .container ul li .div1 p{
+    color:#ffffff;
+    height:50px;
+    font-size:20px;
+    line-height:50px;text-align:center;
+}
+.prod-info .container ul li .div2{
+    background:#eeeeee;
+    width:207px;
+    height:63px;
+    position:absolute;
+    top:233px;
+}
+.prod-info .container ul li .div1 button{
+    width:70px;
+    height:30px;
+    border-radius:7px;
+    font-size:14px;
+    color:#ffffff;
+    position:absolute;
+    top:18px;
+    left:68px;
+}
+/*<!--产品信息结束-->*/
+/*<!--服务与支持开始-->*/
+.service{
+    width:100%;
+}
+.service .top{
+    margin:130px 0 50px 170px;
+    position:relative;
+    width:900px;
+}
+.service .top .title{
+    margin:auto;
+    width:140px;
+    height:120px;
+    background-color:#ffffff;
+    position:absolute;
+    top:-58px;
+    left:461px;
+}
+.service .top .title p{
+    color:#5a98de;
+}
+.service .top .title div{
+    margin-left:6px;
+    width:120px;
+    border:2px solid #0000FF;
+}
+.service .container{
+    width:100%;
+    height:370px;
+    background-image:url("../img/service-bg.png ");
+    background-size:100%;
+}
+.service .container img{
+    width:100px;
+    height:100px;
+}
+.service .container div ul{
+    width:1100px;
+    margin:auto;
+}
+.service .container div ul li{
+    display:inline-block;
+    width:314px;
+    margin:30px 24px 0 10px;
+}
+.service .container div ul li .pull-right{
+    margin-left:10px;
+    width:200px;
+    height:115px;
+    padding:0;
+}
+.service .container div ul li img:hover{
+    transform-origin:50% 50%;
+    transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+}
+/*<!--服务与支持结束-->*/
+/*<!--解决方案开始-->*/
+.solve{
+    width:100%;
+}
+.solve .top{
+    margin:130px 0 50px 170px;
+    position:relative;
+    width:900px;
+}
+.solve .top .title{
+    margin:auto;
+    width:140px;
+    height:120px;
+    background-color:#ffffff;
+    position:absolute;
+    top:-58px;
+    left:461px;
+}
+.solve .top .title p{
+    color:#5a98de;
+}
+.solve .top .title div{
+    margin-left:6px;
+    width:120px;
+    border:2px solid #0000FF;
+}
+.solve .container{
+    width:100%;
+    background-image:url("../img/solve_bg.jpg ");
+    background-size:100%;
+}
+.solve .container .f-l{
+    width:122px;
+    height:155px;
+    border:2px solid #ffffff;
+}
+.solve .container div ul{
+    width:1100px;
+    margin:auto;
+}
+.solve .container div ul li{
+    display:inline-block;
+    width:464px;
+    margin:30px 50px 38px 13px;
+    color:#000000;
+}
+.solve .container div ul li .pull-right{
+    width:328px;
+    height:145px;
+}
+.solve .container div ul li .p1{
+    font-size:25px;
+}
+.solve .container div ul li .p3{
+    width:328px;
+    height:70px;
+    background:url("../img/solve_img1_bg.png") no-repeat;
+    background-size:345px 100px;
+    padding:15px;
+    font-size:12px;
+}
+.solve .container div ul li .f-r{
+    margin-left:24px;
+    width:315px;
+}
+/*<!--解决方案结束-->*/
+/*!*<!--行业新闻开始-->*!*/
+.list-box{
+    width:100%;
+    height:447px;
+    background:url("../img/service-bg.png ") no-repeat;
+    background-size:100% 450px;
+}
+.list-box .container{
+    width:1100px;
+    margin:auto;
+}
+.list-box .container ul .li1{
+    display:inline-block;
+    width:288px;
+    height:300px;
+    margin:30px 59px 0 5px;
+}
+.list-box .container .box{
+    width:323px;
+    height:300px;
+}
+.list-box .container .title{
+    font-size:15px;
+    width:350px;
+    height:80px;
+}
+.list-box .container .title .span1{
+    color:#8B7B4A;
+}
+.list-box .container .title div{
+    height:1px;
+}
+/*!*<!--行业新闻结束-->*!*/

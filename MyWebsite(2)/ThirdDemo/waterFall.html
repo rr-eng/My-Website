@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>瀑布流布局</title>
+    <link rel="stylesheet" href="waterFall.css " type="text/css">
+    <script src="waterFall.js "></script>
+</head>
+<body>
+<h1>瀑布流布局</h1>
+<div id="wrapper">
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img2.jpg " alt="img2"/>
+            <p class="title">Battle Field</p>
+            <hr>
+            <p class="text">Battle Field for you....</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img5.jpg " alt="img5"/>
+            <p class="title">Beach</p>
+            <hr>
+            <p class="text">Relaxing on Beach...</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img15.jpg " alt="img15"/>
+            <p class="title">Autumn</p>
+            <hr>
+            <p class="text">The Trees in tht Antumn...</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img21.jpg " alt="img21"/>
+            <p class="title">Yellow Cloudy</p>
+            <hr>
+            <p class="text">Yellow Cloudy Just For You...</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img17.jpg " alt="img17"/>
+            <p class="title">Light</p>
+            <hr>
+            <p class="text">The Only Shinning Light...</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img19.jpg " alt="img19"/>
+            <p class="title">Sun Flower</p>
+            <hr>
+            <p class="text">Good SunShine for Flowers...</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img20.jpg " alt="img20"/>
+            <p class="title">Alone</p>
+            <hr>
+            <p class="text">Lonely Plant...</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img16.jpg " alt="img16"/>
+            <p class="title">Autumn Light</p>
+            <hr>
+            <p class="text">Sun Shinning into Forest...</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img22.jpg " alt="img22"/>
+            <p class="title">Rooters' Ranch</p>
+            <hr>
+            <p class="text">One Mysterious Place...</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img23.jpg " alt="img23"/>
+            <p class="title">Winter Whisper</p>
+            <hr>
+            <p class="text">One Felling of Winter Whisper...</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img24.jpg " alt="img24"/>
+            <p class="title">Sundays Sunset</p>
+            <hr>
+            <p class="text">Sunset in The Beach...</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img25.jpg " alt="img25"/>
+            <p class="title">Flowers</p>
+            <hr>
+            <p class="text">Colorful Flowers...</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img26.jpg " alt="img26"/>
+            <p class="title">Bridge to Heaven</p>
+            <hr>
+            <p class="text">Where The Bridge Lead To...</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img27.jpg " alt="img27"/>
+            <p class="title">Sunset Lake</p>
+            <hr>
+            <p class="text">A Peaceful Sunset Lake...</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box_img">
+            <img src="image/img28.jpg " alt="img28"/>
+            <p class="title">Herringfleet Mill</p>
+            <hr>
+            <p class="text">Just A Good Place -- Herringfleet Mill...</p>
+            <p class="foot">From Katty</p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+<!--
+   1.最外层div，container不设置宽度，在js中根据每行可放置的图片个数来确定宽度。
+   2.getImgNumber函数，获取wrapper下所有类名为box的元素，即为图片张数。根据box的宽度，可以得出每行可以
+     放置图片的张数，并给wrapper设置css样式。
+     定义一个数组boxHeightArr用来存放每个box的高度，循环遍历所有的box,首先将第一行box存放入boxHeightArr数组中，
+     遍历boxHeightArr，找出第一行中高度最小的box,将下一个box放入高度最小的box下，并给这个box设置css样式，同时
+     改变数组boxHeightArr中第一行中高度最小的box的高度。
+   3.loadImgBox函数，确定滚动到什么位置开始加载数据。
+     获取最后一张图片距离顶部的位置lastImgTop,滚动的top值scrollTop，当前页面的高度pageHeight。
+     如果scrollTop + pageHeight值大于 lastImgTop时，则需要加载数据。
+     scrollTop未滚动时值为0，滚动时开始不断增加。
+ ->
