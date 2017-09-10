@@ -1,0 +1,56 @@
+/*page3.html开始*/
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background:#fff;
+}
+.page3_container{
+    width:75%;
+    height:480px;
+    margin:0 auto;
+    margin-bottom:40px;
+}
+.page3_container .title{
+    margin-top:20px;
+    padding:10px 0 5px 0;
+    line-height:50px;
+    font-size:26px;
+    font-weight:bold;
+    border-bottom:1px solid #ddd;
+}
+.contactContainer{
+    width:100%;
+    margin-top:20px;
+}
+.first,.second{
+    width:100%;
+    border-bottom:1px dashed #ddd;
+}
+.first p,.second p{
+    font-size:18px;
+    line-height:60px;
+    color:#666;
+}
+.first p img,.second p img{
+    width:27px;
+    height:27px;
+    vertical-align:middle;
+}
+/*留言区样式控制*/
+#message{
+    background: #fffafa;
+    padding:10px;
+}
+#button{
+    width:80px;
+    height:40px;
+    border:1px solid #dffffa;
+    border-radius:7px;
+    background: #d0eeff;
+    margin-left:130px;
+    cursor:pointer;
+    
+}
+/*page3.html结束*/

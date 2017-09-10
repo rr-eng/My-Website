@@ -1,0 +1,187 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:"Arial";
+}
+/*page2.html开始*/
+/*简历部分开始*/
+.resume{
+    width:75%;
+    height:auto;
+    margin:0 auto;
+    margin-bottom:40px;
+}
+/*简历title*/
+.resume .title{
+    margin-top:20px;
+    padding:10px 0 5px 0;
+    line-height:50px;
+    font-size:26px;
+    font-weight:bold;
+    border-bottom:1px solid #ddd;
+}
+/*简历第一行*/
+.resumeContainer{
+    margin-top:40px;
+    border:1px solid #eee;
+}
+.first{
+    width:100%;
+    height:55px;
+    line-height:55px;
+    background: #d2e8ff;
+}
+.first .p1{
+    float:left;
+    font-size:14px;
+    padding-left:15px;
+}
+.first .p2{
+    float:right;
+    font-size:14px;
+    padding-right:15px;
+}
+.first .p2 a{
+    display:block;
+    text-decoration:none;
+    width:70px;
+    height:35px;
+    background: #4a77d4;
+    border-radius:3px;
+    line-height:35px;
+    text-align:center;
+    margin-top:10px;
+    color:#fff;
+}
+.first .p2 a img{
+    vertical-align:middle;
+}
+/*简历照片信息*/
+.second{
+    width:100%;
+    background: #fafafa;
+    padding:25px 0;
+    overflow:hidden;
+}
+.second .myImg{
+    float:left;
+    width:25%;
+}
+.second .myImg img{
+    width:120px;
+    height:160px;
+    border:1px solid #aaa;
+    margin-left:50px;
+}
+.second .myInfo{
+    float:right;
+    width:75%;
+}
+.second .myInfo p{
+    line-height:50px;
+    font-size:22px;
+}
+/*简历基本信息*/
+.third,.forth,.fifth,.sixth{
+    width:100%;
+    padding:30px 0;
+    overflow:hidden;
+    border-bottom:1px dashed #ddd;
+}
+.third p:nth-child(1),.forth p:nth-child(1),.fifth p:nth-child(1),.sixth p:nth-child(1){
+    margin-left:50px;
+    line-height:50px;
+    font-size:20px;
+}
+.third p:nth-child(1) img,.forth p:nth-child(1) img,.fifth p:nth-child(1) img,.sixth p:nth-child(1) img{
+    vertical-align:middle;
+    margin-right:8px;
+}
+.third .left{
+    float:left;
+    width:30%;
+    margin-left:50px;
+}
+.third .left p,.third .right p,.forth .skill p,.fifth .experience p,.sixth .other p{
+    margin-left:0;
+    line-height:35px;
+    font-size:14px;
+}
+.third .right{
+    float:right;
+    width:60%;
+}
+/*简历专业技能*/
+.forth .skill{
+    margin-left:50px;
+}
+/*简历实践经历*/
+.fifth .experience{
+    margin-left:50px;
+}
+.fifth .experience p:nth-child(1),.fifth .experience p:nth-child(3){
+    font-size:16px;
+    font-weight:bold;
+}
+.fifth .experience p:nth-child(2){
+    margin-bottom:15px;
+}
+.fifth .experience p span:nth-child(1){
+    float:left;
+    margin-right:25px;
+}
+/*简历其它技能*/
+.sixth{
+    border-bottom:none;
+}
+.sixth .other{
+    margin-left:50px;
+}
+.sss{
+    height:300px;
+}
+/*实现动画*/
+.resumeContainer .prEven{
+    opacity:0;
+    animation:MoveRight 3s forwards;
+    animation-play-state:paused;
+}
+.resumeContainer .prOdd{
+    opacity:0;
+    animation:MoveLeft 3s forwards;
+    animation-play-state:paused;
+}
+.resumeContainer .pr4{
+    opacity:0;
+    animation:MoveLeft 3s forwards;
+    animation-play-state:paused;
+}
+.resumeContainer .pr5{
+    opacity:0;
+    animation:MoveRight 3s forwards;
+    animation-play-state:paused;
+}
+.resumeContainer .move{
+    animation-play-state:running;
+}
+@keyframes MoveRight{
+    from{
+        opacity:0;
+        margin-left:-500px;
+    }
+    to{
+        opacity:1;
+        margin-left:0;
+    }
+}
+@keyframes MoveLeft{
+    from{
+        opacity:0;
+        margin-left:1500px;
+    }
+    to{
+        opacity:1;
+        margin-left:0;
+    }
+}
+/*page2.html结束*/
