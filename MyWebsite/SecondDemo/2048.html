@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2048游戏</title>
+    <link rel="stylesheet" href="2048.css" type="text/css">
+    <script src="jquery-2.1.1.min.js "></script>
+    <script src="2048_main.js"></script>
+    <script src="2048_pos.js "></script>
+    <script src="2048_move.js "></script>
+</head>
+<body>
+<header>
+    <ul>
+        <li>2</li>
+        <li>0</li>
+        <li>4</li>
+        <li>8</li>
+    </ul>
+    <p>Score: <span id="score">0</span><a href="javascript:newGame()">New Game</a></p>
+</header>
+<div id="square-container">
+    <div class="square-cell" id="square-cell-0-0"></div>
+    <div class="square-cell" id="square-cell-0-1"></div>
+    <div class="square-cell" id="square-cell-0-2"></div>
+    <div class="square-cell" id="square-cell-0-3"></div>
+
+    <div class="square-cell" id="square-cell-1-0"></div>
+    <div class="square-cell" id="square-cell-1-1"></div>
+    <div class="square-cell" id="square-cell-1-2"></div>
+    <div class="square-cell" id="square-cell-1-3"></div>
+
+    <div class="square-cell" id="square-cell-2-0"></div>
+    <div class="square-cell" id="square-cell-2-1"></div>
+    <div class="square-cell" id="square-cell-2-2"></div>
+    <div class="square-cell" id="square-cell-2-3"></div>
+
+    <div class="square-cell" id="square-cell-3-0"></div>
+    <div class="square-cell" id="square-cell-3-1"></div>
+    <div class="square-cell" id="square-cell-3-2"></div>
+    <div class="square-cell" id="square-cell-3-3"></div>
+</div>
+</body>
+</html>
+
+
+<!--
+ js说明：
+ 》newGame()，用户点击newGame,进行初始化，并且在随机的两个格子里生成数字。
+ 》初始化init()，循环遍历16个方格，给每个方格固定位置，即得到每个方格的top值和left值。调用getPosTop()和getPosLeft()两个函数。
+ 》update(),若非第一次进入游戏，生成newGame时，需要将之前状态清除。移除所有所有数字方格。循环遍历16个方格，将数字div添加到square-container
+   中，若数字不存在，设置具体的css样式；若数字存在，则调用showNumber()函数，显示数字。
+ 》showNumber(),得到每个数字方格，并给方格数字设置样式。若方格数字过大，可改变数字字体。
+ 》getNumberBackgroundColor(),将颜c色保存在数组里，循环条件，依次实现数组中的颜色。
+ 》getNumberColor(),数字小于4时，设置一个颜色，其它情况下都为白色。
+ 》putOneNewNumber(),在一个随机的位置产生一个随机数。产生一个随机位置。每产生一次随机数，randomTimes加1，当randomTimes大于等于50次时，
+   循环遍历16个方格，发现为空格的方格位置[i][j]赋值给[randomX][randomY]。
+ 》设置键盘监听事件。switch-case语句控制四种情况，四种情况判断：如果可以移动，则执行移动函数，并在指定时间后执行putOneNewNumber()，产生一个随机数。
+ 判断游戏是否可以结束。
+ 》noSpace(),判断当前情况是否还有空位。
+ 》isGameOver(),判断游戏是否结束。
+ 》canMoveLeft(),判断当前情况是否能向左移动。
+ 》canMoveUp(),判断当前情况是否能向上移动。
+ 》canMoveRight(),判断当前情况是否能向右移动。
+ 》canMoveDown(),判断当前情况是否能向下移动。
+ 》canMove(),判断当前情况能否向四个方向移动。
+ 》
+-->
+
+<!--
+   js监听键盘事件： onkeydown();
+   jQuery监听键盘事件： keydown();
+-->
+
+<!--
+   先将整体界面布局好，然后再每个方格中添加数字方格，添加数字时用js控制。
+-->
