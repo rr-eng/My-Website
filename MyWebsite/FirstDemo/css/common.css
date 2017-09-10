@@ -1,0 +1,127 @@
+/*<!--通用顶部开始-->*/
+header{
+    width:100%;
+    background-image:url("../img/header_bg.png ");
+    height:106px;
+    background-size:100% 106px;
+}
+.header{
+    width:1100px;
+    margin:auto;
+    line-height:106px;
+}
+.header .pull-left img{
+    width:160px;
+    height:60px;
+}
+.header .pull-left .logo-text{
+    width:280px;
+    height:106px;
+    margin-left:10px;
+}
+.header .pull-right b{
+    font-size:20px;
+    color:#3366ff;
+}
+/*<!--通用顶部结束-->*/
+/*<!--通用导航开始-->*/
+.nav{
+    background:#6666ff;
+}
+.nav>li:hover .dropdown-menu{  /*<!--鼠标悬停出现下拉菜单-->*/
+    display: block;
+}
+.nav .nav-content{
+    width:1110px;
+    margin:0 auto;
+}
+.nav .navbar-nav>li>a{
+    color:#000111;
+    font-size:20px;
+    width:158px;
+    text-align:center;
+}
+.current{
+    background:#6699ff;
+}
+/*<!--通用导航结束-->*/
+/*<!--通用页脚开始-->*/
+footer{
+    width:100%;
+    height:300px;
+    background-image:url("../img/footer_bg.png ");
+    background-size:100% 300px;
+    padding-top:30px;
+}
+.footer-content{
+    width:1100px;
+    height:230px;
+    margin:0 auto;
+}
+.first{
+    font-size:20px;
+    font-weight:bold;
+    border-bottom:2px solid #000;
+    width:100px;
+    margin-bottom:10px;
+}
+.footer-content ul{
+     margin:0 40px 0 25px;
+ }
+.footer-content ul li{
+    width:120px;
+    line-height:28px;
+}
+.footer-content ul li a{
+    color:#000000;
+}
+.foot-btm{
+    width:100%;
+    height:70px;
+    background-image:url("../img/footer_btm.png");
+    padding:10px 0 5px 0;
+    color:#ffffff;
+}
+/*<!--通用底部结束-->*/
+/*<!--通用客服定位开始-->*/
+.tab_demo{
+    position:fixed;
+    right:0;
+    top:50%;
+    background-color:#eeeeee;
+}
+.tab_demo .tab_container {
+    position:relative;
+}
+.tab_demo .tab_container span{
+    display:block;
+    width:55px;
+    height:50px;
+    text-align:center;
+    font-size:24px;
+    line-height:50px;
+}
+.tab_demo .tab_con{
+    width:150px;
+    padding:5px;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    border:1px solid #cccccc;
+    background-color:#f2f2
+}
+.tab_demo div:nth-child(2){
+    position:absolute;
+    right:65px;
+    bottom:10px;
+}
+.tab_demo div:nth-child(3){
+    position:absolute;
+    right:65px;
+    top:40px;
+}
+.tab_demo div:nth-child(4){
+    position:absolute;
+    right:65px;
+    top:90px;
+}
+/*<!--通用客服定位结束-->*/
